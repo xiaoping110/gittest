@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/xiaoping110/gittest/issues"
   },
-  "homepage": "https://github.com/xiaoping110/gittest#readme"
+  "homepage": "https://github.com/xiaoping110/gittest#readme",
+  "dependencies": {
+    "@koa/router": "^9.4.0",
+    "koa": "^2.13.0",
+    "vue": "^2.6.12",
+    "vue-server-renderer": "^2.6.12"
+  }
 }
