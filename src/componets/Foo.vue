@@ -1,15 +1,13 @@
 <template>
-  <div @click="show">
-    Foo
+  <div>
+    Foo--{{this.$store.state.name}}
   </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    show () {
-      alert(1)
-    }
+  asyncDate (store) {
+    return store.dispatch('changeName', 'zf');
   }
 }
 </script>

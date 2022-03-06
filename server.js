@@ -23,7 +23,14 @@ const render = VueServerRenderer.createBundleRenderer(serverBundle, {
 router.get('/(.*)', async(ctx) => {
     //客户端=template+编译的结果=组成的Html
     //在我们渲染页面的时候，需要让服务器根据当前的路径渲染对应的路由
-    ctx.body = await render.renderToString({ url: ctx.url });
+    try {
+        ctx.body = await render.renderToString({ url: ctx.url });
+    } catch (err) {
+        if (err.code == 404) {
+            ctx.body = 'page not found';
+        }
+    }
+
 });
 //先匹配静态资源，资源找不到再找对应的api
 app.use(static(path.resolve(__dirname, 'dist')));
