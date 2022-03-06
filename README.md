@@ -21,4 +21,4 @@ git push -u origin master
 npm webpack@4 webpack-cli@ webpack-dev-server@ vue-loader vue-style-loader css-loader @babel/core @babel/preset-env balel-loader  vue-template-compiler html-webpack-plugin
 
 
-远程修改~~~
+SSR是怎么切换的：服务端会拿到路径，在服务端渲染好对应的页面，把结果返回，当客户端切换的时候由客户端路由接管。
